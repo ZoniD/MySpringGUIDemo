@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MyIndex</title>
+    <style>
+        #wrapper{
+            height: 100px;
+            width: 400px;
+            border: 1px solid black;
+            margin: auto;
+            padding: 4px;
+        }
+        #left{
+            width: 190px;
+            float: left;
+            border: 1px solid blue;
+            padding: 4px;
+        }
+        #right{
+            width: 198px;
+            float: left;
+            border: 1px solid red;
+        }
+        #left form input{
+            margin-bottom: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>My index page</h1>
+    <div id="wrapper">
+        <div id="left">
+            <form action="/personData" method="post">
+                <input type="text" name="firstName" placeholder="First name">
+                <input type="text" name="lastName" placeholder="Last name">
+                <input type="submit" value="Send data">
+            </form>
+        </div>
+        <div id="right">
+            <input type="checkbox" name="Vehicle 1" value="bike">I have a bike<br>
+            <input type="checkbox" name="Vehicle 2" value="car">I have a car<br>
+            <input type="checkbox" name="Vehicle 3" value="boat">I have a boat<br>
+        </div>
+    </div>
+</body>
+</html>
