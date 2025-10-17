@@ -5,11 +5,11 @@
     <title>Index</title>
     <style>
         #wrapper{
-            height: 200px;
+            height: 300px;
             width: 400px;
-            border: 1px solid black;
+            border: 1px white;
             margin: auto;
-            padding: 4px;
+            padding: 10px;
         }
         #left{
             width: 190px;
@@ -20,28 +20,38 @@
         #right{
             width: 198px;
             float: left;
-            border: 1px solid blue;
+            border: 1px solid black;
         }
+
         #left form input{
             margin-bottom: 4px;
         }
     </style>
 </head>
-<body>
-  <h1>Dette er min nye side</h1>
+<body style="background-image: url('DarkSouls.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+  <p style="color:red; font-family: verdana; vertical-align: sub; margin-left: 20px;"> This is another paragraf </p>
+  <p style="font-size:400%;"> this is large</p>
+  <p>
+
   <div id="wrapper">
     <div id="left">
-        <form action="/personData" method="post">
+        <form action="/personData" method="post" th:object ="${ChoosenUndead}">
+            <label>
             <input type="text" name="first_name" placeholder="First name">
             <input type="text" name="last_name" placeholder="Last name">
             <input type="submit" value="Send data">
         </form>
     </div>
+
       <div id="right">
-          <input type="checkbox" name="vehicle1" value="bike">I have a bike<br>
-          <input type="checkbox" name="vehicle2" value="car">I have a car<br>
-          <input type="checkbox" name="vehicle3" value="boat" checked="checked">I have a boat<br>
+      <form action="/undead" method="post">
+
+
+          <input type="checkbox" name="Did you beat Gargoyel" value="Gargoyel">Did you beat Gargoyel<br>
+          <input type="checkbox" name="Did you beat Bed Of Chaos" value="Chaos">Did you beat Bed Of Chaos<br>
+          <input type ="submit" value="send data">
       </div>
   </div>
+  </form>
 </body>
 </html>
